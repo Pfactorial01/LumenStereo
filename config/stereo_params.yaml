@@ -1,0 +1,39 @@
+# LumenStereo Default Configuration
+# SGBM Algorithm Parameters
+
+# Disparity range [minDisparity, maxDisparity)
+# Larger range allows detecting closer objects but is slower
+minDisparity: 0
+maxDisparity: 128
+
+# Block size for matching (must be odd number >= 3)
+# Larger values: more robust but lose edge detail
+# Smaller values: better edges but more noise
+blockSize: 5
+
+# Smoothness penalties for Semi-Global Matching
+# P1: penalty for ±1 disparity change (allows edges)
+# P2: penalty for larger changes (enforces smoothness, adaptive at edges)
+# Rule: P2 > P1. Standard formula: P1 = 8*blockSize², P2 = 32*blockSize²
+P1: 200
+P2: 800
+
+# Sobel prefilter clipping value (bounds per-pixel SAD cost contribution)
+preFilterCap: 31
+
+# Post-processing parameters
+# uniquenessRatio: reject if best match isn't this % better than second best
+uniquenessRatio: 5
+
+# disp12MaxDiff: max L-R disparity difference (set -1 to disable)
+disp12MaxDiff: 2
+
+# Speckle filter: removes small isolated regions (kernel 5x5, so use <= 25 or 0 to disable)
+speckleWindowSize: 0
+speckleRange: 24
+
+# Use GPU implementation
+useGPU: true
+
+# Number of SGM directions (4 or 8, more = better quality but slower)
+numDirections: 8
