@@ -6,6 +6,12 @@ A real-time GPU-accelerated stereo depth estimation pipeline implemented in C++/
 ![CUDA](https://img.shields.io/badge/CUDA-12.x-green.svg)
 ![C++](https://img.shields.io/badge/C++-17-blue.svg)
 
+## Sample Images
+
+| Input (`im0.png`) | OpenCV Disparity | LumenStereo Disparity |
+|---|---|---|
+| ![Input Image](dataset/Adirondack-perfect/im0.png) | ![OpenCV Disparity](opencv_disparity.png) | ![LumenStereo Disparity](lumenstereo_disparity.png) |
+
 ## Features
 
 - **GPU-Accelerated SGBM**: Full Semi-Global Block Matching implementation on CUDA
