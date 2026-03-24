@@ -1,5 +1,3 @@
 build/
 /disparity_color.png
 /disparity_enhanced.png
-/lumenstereo_disparity.png
-/opencv_disparity.png
